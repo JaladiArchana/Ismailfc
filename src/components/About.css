@@ -1,0 +1,155 @@
+.about {
+  background-color: var(--color-cream);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about__layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .about__layout {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 4.5rem;
+  }
+}
+
+.about__prose {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.05rem;
+  color: var(--color-charcoal-muted);
+  font-size: 0.98rem;
+}
+
+.about__pillars {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--color-border);
+}
+
+@media (min-width: 600px) {
+  .about__pillars {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+.about__pillar {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+.about__pillar-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: var(--color-burgundy);
+  color: var(--color-cream);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.about__pillar-title {
+  font-family: var(--font-heading);
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--color-charcoal);
+}
+
+.about__pillar-text {
+  font-size: 0.84rem;
+  color: var(--color-charcoal-muted);
+  margin-top: 0.25rem;
+  line-height: 1.5;
+}
+
+.about__footer-note {
+  margin-top: 1.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.about__meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--color-burgundy);
+  background-color: var(--color-cream-alt);
+  border: 1px solid var(--color-border);
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-pill);
+}
+
+/* Visual Column */
+.about__visual {
+  position: relative;
+}
+
+.about__frame {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  background-color: var(--color-cream-alt);
+}
+
+.about__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.about__frame:hover .about__image {
+  transform: scale(1.03);
+}
+
+.about__caption-card {
+  position: relative;
+  margin-top: 1.1rem;
+  padding: 1.25rem 1.4rem;
+  background-color: var(--color-cream-alt);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-burgundy);
+  border-radius: var(--radius-md);
+}
+
+@media (min-width: 960px) {
+  .about__caption-card {
+    margin-top: -2.6rem;
+    margin-inline: 1.5rem 1.5rem;
+    background-color: var(--color-cream);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+.about__caption-eyebrow {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-burgundy);
+  margin-bottom: 0.3rem;
+}
+
+.about__caption-text {
+  font-size: 0.88rem;
+  color: var(--color-charcoal-soft);
+  line-height: 1.55;
+}

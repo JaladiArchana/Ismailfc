@@ -1,0 +1,153 @@
+.enquiry-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 350;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.enquiry-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(24, 18, 18, 0.72);
+}
+
+.enquiry-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.enquiry-modal__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.5rem 1.6rem 1.25rem;
+  background-color: var(--color-burgundy);
+  color: var(--color-cream);
+}
+
+.enquiry-modal__eyebrow {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+.enquiry-modal__title {
+  font-family: var(--font-heading);
+  font-size: 1.65rem;
+  font-weight: 600;
+  margin-top: 0.15rem;
+}
+
+.enquiry-modal__close {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 248, 236, 0.25);
+  color: var(--color-cream);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-fast);
+}
+
+.enquiry-modal__close:hover {
+  background-color: rgba(255, 248, 236, 0.12);
+}
+
+.enquiry-modal__form {
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.enquiry-modal__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.enquiry-modal__label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-charcoal);
+}
+
+.enquiry-modal__pills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.55rem;
+}
+
+.enquiry-modal__pill {
+  padding: 0.62rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-strong);
+  background-color: var(--color-cream-alt);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-charcoal);
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.enquiry-modal__pill.is-active {
+  background-color: var(--color-burgundy);
+  color: var(--color-cream);
+  border-color: var(--color-burgundy);
+}
+
+.enquiry-modal__input {
+  width: 100%;
+  padding: 0.72rem 0.9rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-strong);
+  background-color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-charcoal);
+}
+
+.enquiry-modal__textarea {
+  resize: vertical;
+  min-height: 82px;
+}
+
+.enquiry-modal__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-top: 0.25rem;
+}
+
+@media (min-width: 480px) {
+  .enquiry-modal__actions {
+    flex-direction: row;
+  }
+
+  .enquiry-modal__submit {
+    flex: 1;
+  }
+}
+
+.enquiry-modal__footnote {
+  text-align: center;
+  font-size: 0.76rem;
+  color: var(--color-charcoal-muted);
+}
